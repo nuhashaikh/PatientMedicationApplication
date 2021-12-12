@@ -18,6 +18,9 @@
 --
 -- Table structure for table `Batch`
 --
+DROP DATABASE IF EXISTS patient_medication;
+CREATE DATABASE patient_medication;
+USE patient_medication;
 
 DROP TABLE IF EXISTS `Batch`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
