@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:linear-gradient(lightblue, rgb(141, 119, 240));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.btn-light {
+    padding: 13px 40px;
+    font-size: 18px;
+    border: 2px solid #ffffff !important;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #0071d1;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+.title{
+  width: 100%;
+  /* height: 200px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+text{
+  font-size: x-large;
+  font-family: sans-serif;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="title">
+        <text>I am a...</text>
+    </div>
+    
+    <hr>
+    <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+    
+    <div class="registerbtn">
+        
+    <div class="signup" style="background:#91cdfd;">
+        <a href="patientSignup.html"><button type= "button" class="registerbtn"> Patient</button></a>
+     </div>
+    
+
+      <div class="login" style="background:#0071d1;">
+        <a href="docSignup.html"> <button type="submit" class="registerbtn">Doctor</button></a>
+     </div>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Log in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
