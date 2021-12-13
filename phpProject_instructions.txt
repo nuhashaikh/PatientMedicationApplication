@@ -1,0 +1,20 @@
+Copy the project folder in www of AppServ (i.e. C:\AppServ\www\PHP_MySQL_Simple_Project).
+
+Create the database in mySQL exactly as mentioned in the php files (i.e. the exact names for the attributes and table).
+For these codes, the table name in the database is 'users'.
+The attributes are 'ID' (auto-increment), 'Name' (varchar), 'Email' (varchar).
+
+In the codes for the following line-
+mysqli_connect("localhost","db_user","cpsc471","patient_medication");
+host = "localhost"
+username = "db_user"
+password = "cpsc471"
+database_name = "patient_medication"
+Use your own values for these.
+If 'root' is not your username then use your username.
+Use the correct 'root' password (i.e. the password for your MySQL) instead of 123456. 
+Use the database name for your database.
+
+Open browser.
+Type localhost.
+Type the folder name of your project and the php file name you want to execute. (i.e. http://localhost/PHP_MySQL_Simple_Project/view.php)
