@@ -29,6 +29,13 @@
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
+
+   <style>
+      table, th, td {
+        text-align: center;
+        border: 1px solid black;
+      }
+      </style>
    </head>
    <body class="clinic_version">
       <!-- LOADER -->
@@ -69,10 +76,10 @@
                         <li><a data-scroll href="login.html">Login</a></li>
 
                         <li><a data-scroll href="#about">About us</a></li>
-                        <li><a data-scroll href="#service">Your Medication</a></li>
+                        <li><a data-scroll href="#service">Book Appointment</a></li>
+                        <li><a data-scroll href="#testimonials">Your Medication</a></li>
                         <li><a data-scroll href="#doctors">Consult a Doctor</a></li>
                         <li><a data-scroll href="#price">Find a Clinic</a></li>
-						      <li><a data-scroll href="#testimonials"></a></li>
                         <li><a data-scroll href="#getintouch"></a></li>
 
                      </ul>
@@ -189,15 +196,15 @@
                      The Patient Medication Application sends reminders, through email or text, for each medication registered when patients need to take or refill their medication. If they choose to refill their medication, the application allows them to notify the registered pharmacy or book an appointment with their physician, as needed. 
                      Our esteemed web application also allow patients to have a log or make note of any side effects that they experience. As well, a general chat feature would allow patients to have their questions or concerns addressed immediately by their doctor or pharmacist. 
                      </p>
-                     <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
+                     <!-- <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a> -->
                   </div>
                   <!-- end messagebox -->
                </div>
                <!-- end col -->
                <div class="col-md-6">
-                  <!-- <div class="post-media wow fadeIn">
+                  <div class="post-media wow fadeIn">
                      <img src="images/water.png" alt="#">
-                  </div> -->
+                  </div>
                   <!-- end media -->
                </div>
                <!-- end col -->
@@ -205,10 +212,11 @@
             <!-- end row -->
          <!-- end container -->
       </div>
+      
       <div id="service" class="services wow fadeIn">
          <div class="container">
             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+               <!-- <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
                   <div class="inner-services">
                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="serv">
@@ -253,7 +261,7 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div> -->
                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                   <div class="appointment-form">
                      <h3><span>+</span> Book Appointment</h3>
@@ -352,75 +360,7 @@
 	  
 	  <!-- doctor -->
 	  
-	  <div id="doctors" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="doctors" tabindex="-1">
-        <div class="container">
-		
-		<div class="heading">
-               <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
-               <h2>The Specialist Clinic</h2>
-            </div>
-
-            <div class="row dev-list text-center">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
-                    <div class="widget clearfix">
-                        <!-- <img src="images/doctor_01.jpg" alt="" class="img-responsive img-rounded"> -->
-                        <div class="widget-title">
-                            <h3>Melanie Nguyen</h3>
-                            <small>Clinic Owner</small>
-                        </div>
-                        <!-- end title -->
-                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
-
-                        <div class="footer-social">
-                            <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div><!--widget -->
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeIn;">
-                    <div class="widget clearfix">
-                        <!-- <img src="images/doctor_02.jpg" alt="" class="img-responsive img-rounded"> -->
-                        <div class="widget-title">
-                            <h3>Huda Abbas</h3>
-                            <small>Internal Diseases</small>
-                        </div>
-                        <!-- end title -->
-                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
-
-                        <div class="footer-social">
-                            <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div><!--widget -->
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn">
-                    <div class="widget clearfix">
-                        <!-- <img src="images/doctor_03.jpg" alt="" class="img-responsive img-rounded"> -->
-                        <div class="widget-title">
-                            <h3>Nuha Shaikh </h3>
-                            <small>Orthopedics Expert</small>
-                        </div>
-                        <!-- end title -->
-                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
-
-                        <div class="footer-social">
-                            <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div><!--widget -->
-                </div><!-- end col -->
-
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div>
+	  
 	
     <!-- <a href="login.html" target="_self">Login</a> -->
 
@@ -499,134 +439,9 @@
          </div>
       </div>
 
-	  <!-- <div id="price" class="section pr wow fadeIn" style="background-image:url('images/price-bg.png');">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="tab-content">
-                     <div class="tab-pane active fade in" id="tab1">
-                        <div class="row text-center">
-                           <div class="col-md-4">
-                              <div class="pricing-table">
-                                 <div class="pricing-table-header">
-                                    <h2>Shared Hosting</h2>
-                                    <h3>$85/month</h3>
-                                 </div>
-                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                 </div>
-                                 <div class="pricing-table-sign-up">
-                                    <a href="#contact" data-scroll="" class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="pricing-table pricing-table-highlighted">
-                                 <div class="pricing-table-header grd1">
-                                    <h2>WordPress Hosting</h2>
-                                    <h3>$59/year</h3>
-                                 </div>
-                                 <div class="pricing-table-space"></div>
-                                 <div class="pricing-table-text">
-                                    <p>This is a perfect choice for small businesses and startups.</p>
-                                 </div>
-                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                    <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                 </div>
-                                 <div class="pricing-table-sign-up">
-                                    <a href="#contact" data-scroll="" class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="pricing-table">
-                                 <div class="pricing-table-header">
-                                    <h2>Reseller Hosting</h2>
-                                    <h3>$85/one-time</h3>
-                                 </div>
-                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                 </div>
-                                 <div class="pricing-table-sign-up">
-                                    <a href="#contact" data-scroll="" class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-
-                        end row -->
-                     <!-- </div>
-                     <!- - end pane -->
-                     <!-- <div class="tab-pane fade" id="tab2">
-
-                        <div class="row text-center">
-                           <div class="col-md-6">
-                              <div class="pricing-table">
-                                 <div class="pricing-table-header">
-                                    <h2>Dedicated Server</h2>
-                                    <h3>$85/month</h3>
-                                 </div>
-                                 <div class="pricing-table-space"></div>
-                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                 </div>
-                                 <div class="pricing-table-sign-up">
-                                    <a href="#contact" data-scroll="" class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="pricing-table pricing-table-highlighted">
-                                 <div class="pricing-table-header grd1">
-                                    <h2>VPS Server</h2>
-                                    <h3>$59/month</h3>
-                                 </div>
-                                 <div class="pricing-table-space"></div>
-                                 <div class="pricing-table-text">
-                                    <p>This is a perfect choice for small businesses and startups.</p>
-                                 </div>
-                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                    <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                 </div>
-                                 <div class="pricing-table-sign-up">
-                                    <a href="#contact" data-scroll="" class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!- - end row -->
-                     <!-- </div>
-                     <!- - end pane -->
-                  <!-- </div> -->
-                  <!-- end content -->
-               <!-- </div> -->
-               <!-- end col -->
-
-            <!-- </div> -->
-         <!-- </div> -->
-      <!-- </div>   --> 
 	  
-	  <!-- end doctor section -->
+	  
+	  end doctor section -->
 	  
        <div id="testimonials" class="section wb wow fadeIn">
          <div class="container">
@@ -634,6 +449,225 @@
                <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
                <h2>Your Medication</h2>
             </div> 
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+               <div class="appointment-form">
+                  <h3><span>+</span> Add Medication</h3>
+                  <div class="form">
+                     <form action="index.html">
+                        <fieldset>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <input type="text" id="name" placeholder="Medication Name"  />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <label for ="expiry"> Expiration Date</label>
+                                    <input type="datetime-local" placeholder="Expiration Date" id="expiry" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <!-- <select class="form-control"> -->
+                                       <!-- <<input type= "date">  LETS PATIENT SELECT DATE OF APPOINTMENT> -->
+                                      <input type="number" placeholder="Doseage eg. 1 tablet">
+                                    
+                                 </div>
+
+                                 <div class="form-group">
+                                    <!-- <select class="form-control"> -->
+                                       <!-- <<input type= "date">  LETS PATIENT SELECT DATE OF APPOINTMENT> -->
+                                      <input type="number" placeholder="Time eg. Every x hours">
+                                       <!-- <option>Day</option>
+                                       <option>Sunday</option>
+                                       <option>Monday</option>
+                                       <option>Tuesday</option>
+                                       <option>Wednesday</option>
+                                       <option>Monday</option> -->
+                                    <!-- </select> -->
+                                 </div>
+
+                                 <div class="form-group">
+                                    <!-- <input type="time"> -->
+                                    <select class="form-control">
+                                       <option>Time Units</option>
+                                       <option>Every <i>x </i> Hours</option>
+                                       <option>Daily</option>
+                                       <option>Weekly</option>
+                                       <option>Monthly</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+
+                         
+                           <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                    <div class="form-group">
+                                       <select name="doctor" id="doctor" class="form-control">
+                                          <option value="default">Doctor Name</option>
+                                          <?php 
+                                             require __DIR__ . '/helper.php';
+                                             $url = "https://localhost:5001/api/doctors/GetDoctors";
+                                             $arr = make_curl_get_request($url);
+                                          
+                                             foreach($arr["value"] as $key=>$value){
+                                                echo '<option value='.$value["id"].'>' . $value["name"] . '</option>';
+                                             }
+
+                                             $url = "https://localhost:5001/api/worksAt/GetWorksAt";
+                                             $arr = make_curl_get_request($url);
+                                             foreach($arr["value"] as $key=>$value){
+                                                if($value["medID"] == $_POST['doctor']){
+                                                   echo '<option value='.$value["clinicNo"].'>' . $value["clinicNo"] . '</option>';
+                                                }
+                                             }
+                                             ?>
+                                       </select> 
+                                       <!-- <select id="clinic" class="form-control">
+                                          <option value="default">Doctor's Clinic</option>   
+                                       </select> -->
+                                    </div>
+                           </div> -->
+
+                           <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <select class="form-control">
+                                       <option>Medication Period</option>
+                                       <option>Fixed Time eg. 1 week</option>
+                                       <option>Indefinte Time Period</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div> -->
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <textarea rows="4" id="textarea_message" class="form-control" placeholder="Notes... Side Effects"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <div class="center"><button type="submit">Submit</button></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </fieldset>
+                     </form>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+               <div class="appointment-form">
+            <h3><span>+</span>Medication List</h3>
+
+               <table style="width: 100%;">
+               <tr>
+                  <th>Med Name</th>
+                  <th>Expiration Date</th>
+                  <th>Doseage</th>
+                  <th>Time</th>
+                  <th>Side Effects</th>
+               </tr>
+               <tr>
+                  <td>Allergy Medication</td>
+                  <td>12/1/1990</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>Light headaches</td>
+               </tr>
+               <tr>
+                  <td>Vitamins</td>
+                  <td>12/11/1999</td>
+                  <td>5</td>
+                  <td>1</td>
+                 
+               </tr>
+               </table>
+               </div>
+            </div>
+
+            
+
+            <div id="doctors" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="doctors" tabindex="-1">
+               <div class="container">
+             
+             <div class="heading">
+                      <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
+                      <h2>Meet Our Doctors!</h2>
+                   </div>
+       
+                   <div class="row dev-list text-center">
+                       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                           <div class="widget clearfix">
+                               <!-- <img src="images/doctor_01.jpg" alt="" class="img-responsive img-rounded"> -->
+                               <div class="widget-title">
+                                   <h3>Melanie Nguyen</h3>
+                                   <small>Software + Biomedical Engineering</small>
+                               </div>
+                               <!-- end title -->
+                               <p>Hello guys, I am the Head of R&D at Stark Industries. In my spare time, I like doing advanced theoretical physics and inventing new coding languages</p>
+       
+                               <div class="footer-social">
+                                   <!-- <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a> -->
+                                   <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
+                                   <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                                   <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
+                               </div>
+                           </div><!--widget -->
+                       </div><!-- end col -->
+       
+                       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeIn;">
+                           <div class="widget clearfix">
+                               <!-- <img src="images/doctor_02.jpg" alt="" class="img-responsive img-rounded"> -->
+                               <div class="widget-title">
+                                   <h3>Huda Abbas</h3>
+                                   <small>Software + Biomedical Engineering</small>
+                               </div>
+                               <!-- end title -->
+                               <p>Hello guys, I am the Vice-President of SpaceX and Art Director for the MET Gallery. In my spare time, I create advance computational algorithms for reinventing the laws of space-time.</p>
+       
+                               <div class="footer-social">
+                                   <!-- <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a> -->
+                                   <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
+                                   <!-- <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a> -->
+                                   <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
+                               </div>
+                           </div><!--widget -->
+                       </div><!-- end col -->
+       
+                       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn">
+                           <div class="widget clearfix">
+                               <!-- <img src="images/doctor_03.jpg" alt="" class="img-responsive img-rounded"> -->
+                               <div class="widget-title">
+                                   <h3>Nuha Shaikh </h3>
+                                   <small>Software + Biomedical Engineering</small>
+                               </div>
+                               <!-- end title -->
+                               <p>Hello, I am the Head of the Harvard Medical Board. In my spare time, I like studying complex microbiology to develop better genetic modification techniques. </p>
+       
+                               <div class="footer-social">
+                                   <!-- <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a> -->
+                                   <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
+                                   <!-- <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a> -->
+                                   <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
+                               </div>
+                           </div><!--widget -->
+                       </div><!-- end col -->
+       
+                   </div><!-- end row -->
+               </div><!-- end container -->
+           </div>
+
 
       <div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
          <div class="container">
