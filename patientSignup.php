@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,6 +83,21 @@ a {
     <label for="email"><b>Phone Number</b></label>
     <input type="text" placeholder="Enter Phone #" name="phone" id="phone" required>
 
+    <label for="doctor"><b>Doctor</b></label>
+    <div class="row">
+      <select name="doctor" id="doctor" class="container">
+        <option value="default"><b>Select Your Doctor</b></option>
+        <?php 
+          require __DIR__ . '/helper.php';
+          $url = "https://localhost:5001/api/doctors/GetDoctors";
+          $arr = make_curl_get_request($url);
+      
+          foreach($arr["value"] as $key=>$value){
+            echo '<option value='.$value["id"].'>' . $value["name"] . '</option>';
+          }
+        ?>
+      </select> 
+    </div>
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
     <hr>

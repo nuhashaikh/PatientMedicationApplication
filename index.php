@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="en">
    <!-- Basic -->
    <meta charset="utf-8">
