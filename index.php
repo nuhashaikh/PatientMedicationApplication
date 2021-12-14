@@ -130,7 +130,29 @@
          <!-- end container -->
       </div>
       <!-- end section -->
-
+      <head>
+  <title>Patient Medication Application Chat</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="chat-box">
+      <div class="chat-head">
+        <h2>Chat Box</h2>
+        <img src="https://maxcdn.icons8.com/windows10/PNG/16/Arrows/angle_down-16.png" title="Expand Arrow" width="16">
+      </div>
+      <div class="chat-body">
+        <div class="msg-insert">
+  <div class="msg-send"> Send message </div>
+  <div class="msg-receive"> Received message </div>
+</div>
+        <div class="chat-text">
+          <textarea placeholder="Send"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
       <div class="signup" style="background:#91cdfd;">
          <a href="signup.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Sign Up</a>
       </div>
