@@ -45,7 +45,7 @@
       <!-- END LOADER -->
       <header>
          <div class="header-top wow fadeIn">
-            <a class="navbar-brand" href="index.html"><img src="images/PMA-logo.png" alt="image"></a>
+            <a class="navbar-brand" href="index.php"><img src="images/PMA-logo.png" alt="image"></a>
             <div class="container">
                <div class="right-header">
                   <div class="header-info">
@@ -70,7 +70,7 @@
                   </div>
                   <div id="navbar" class="navbar-collapse collapse">
                      <ul class="nav navbar-nav">
-                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a class="active" href="index.php">Home</a></li>
 
                         <li><a data-scroll href="signup.html">Sign Up</a></li>
                         <li><a data-scroll href="login.html">Login</a></li>
@@ -181,7 +181,7 @@
                   <div class="appointment-form">
                      <h3><span>+</span> Book Appointment</h3>
                      <div class="form">
-                        <form action="index.html">
+                        <form action="/PatientMedicationApplication/book_action.php" method="post">
                            <fieldset>
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
@@ -297,7 +297,7 @@
                   <div class="appointment-form">
                      <h3><span>+</span> Contact your doctor!</h3>
                      <div class="form">
-                        <form action="index.html">
+                        <form action="index.php">
                            <fieldset>
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
@@ -368,7 +368,7 @@
                <div class="appointment-form">
                   <h3><span>+</span> Add Medication</h3>
                   <div class="form">
-                     <form action="index.html">
+                     <form action="index.php">
                         <fieldset>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
