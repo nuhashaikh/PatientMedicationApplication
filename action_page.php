@@ -12,8 +12,10 @@ $arr = make_curl_get_request($url);
 foreach($arr["value"] as $key=>$value){
     if($value["name"] == $_POST['name'] && $value["password"] == $_POST['psw']){
         echo "patient has been found";
-        echo $value["id"] . "=>" . $value["name"] . "<br>";
-        redirect('/PatientMedicationApplication');
+        echo $value["healthcareNo"] . "=>" . $value["name"] . "<br>";
+        header('Location:index.php?userID='.$value["id"]);
+        redirect('/PatientMedicationApplication/index.php?userID='.$value["healthcareNo"]);
+        //redirect('/PatientMedicationApplication');
     }
 }
 
@@ -25,7 +27,8 @@ foreach($arr["value"] as $key=>$value){
     if($value["name"] == $_POST['name'] && $value["password"] == $_POST['psw']){
         echo "doctor has been found";
         echo $value["id"] . "=>" . $value["name"] . "<br>";
-        redirect('/PatientMedicationApplication');
+        header('Location:/PatientMedicationApplication/doctor.php?userID='.$value["id"]);
+        redirect('/PatientMedicationApplication/doctor.php?userID='.$value["id"]);
     }
 }
 
