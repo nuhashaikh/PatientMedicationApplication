@@ -76,27 +76,13 @@
                         <li><a data-scroll href="login.html">Login</a></li>
 
                         <li><a data-scroll href="#about">About us</a></li>
-                        <li><a data-scroll href="#service">Book Appointment</a></li>
-                        <li><a data-scroll href="#testimonials">Your Medication</a></li>
-                        <li><a data-scroll href="#doctors">Consult a Doctor</a></li>
-                        <li><a data-scroll href="#price">Find a Clinic</a></li>
+                        <li><a data-scroll href="#service">Time Available</a></li>
+                        <li><a data-scroll href="#testimonials">Your Clinics/Pharamcies</a></li>
+                        <li><a data-scroll href="#doctors">Meet The Team</a></li>
                         <li><a data-scroll href="#getintouch"></a></li>
-
                      </ul>
                   </div>
                </nav>
-               <!-- <diThe Specialist Clinic class="serch-bar">
-                  <div id="custom-search-input">
-                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search" />
-                        <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        </span>
-                     </div>
-                  </div>
-               </diThe> -->
             </div>
          </div>
       </header>
@@ -130,29 +116,7 @@
          <!-- end container -->
       </div>
       <!-- end section -->
-      <head>
-  <title>Patient Medication Application Chat</title>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="chat-box">
-      <div class="chat-head">
-        <h2>Chat Box</h2>
-        <img src="https://maxcdn.icons8.com/windows10/PNG/16/Arrows/angle_down-16.png" title="Expand Arrow" width="16">
-      </div>
-      <div class="chat-body">
-        <div class="msg-insert">
-  <div class="msg-send"> Send message </div>
-  <div class="msg-receive"> Received message </div>
-</div>
-        <div class="chat-text">
-          <textarea placeholder="Send"></textarea>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+
       <div class="signup" style="background:#91cdfd;">
          <a href="signup.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Sign Up</a>
       </div>
@@ -201,7 +165,7 @@
             <div class="row">
                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                   <div class="appointment-form">
-                     <h3><span>+</span> Book Appointment</h3>
+                     <h3><span>+</span> Time Available</h3>
                      <div class="form">
                         <form action="/PatientMedicationApplication/book_action.php" method="post">
                            <fieldset>
@@ -246,24 +210,31 @@
                                  <div class="row">
                                     <div class="form-group">
                                        <select name="doctor" id="doctor" class="form-control">
-                                          <option value="default">Doctor Name</option>
+                                          <option value="default">Your Clinics</option>
                                           <?php 
-                                             require __DIR__ . '/helper.php';
-                                             $url = "https://localhost:5001/api/doctors/GetDoctors";
-                                             $arr = make_curl_get_request($url);
-                                          
-                                             foreach($arr["value"] as $key=>$value){
-                                                echo '<option value='.$value["id"].'>' . $value["name"] . '</option>';
-                                             }
+                                            require __DIR__ . '/helper.php';
+                                            $url = "https://localhost:5001/api/worksAt/GetWorksAt";
+                                            $arr = make_curl_get_request($url);
 
-                                             // $url = "https://localhost:5001/api/worksAt/GetWorksAt";
-                                             // $arr = make_curl_get_request($url);
-                                             // foreach($arr["value"] as $key=>$value){
-                                             //    if($value["medID"] == $_POST['doctor']){
-                                             //       echo '<option value='.$value["clinicNo"].'>' . $value["clinicNo"] . '</option>';
-                                             //    }
-                                             // }
-                                             ?>
+                                            $url1 = "https://localhost:5001/api/clinics/GetClinics";
+                                            $arr1 = make_curl_get_request($url1);
+                                            
+
+                                            foreach($arr["value"] as $key=>$value){
+                                                if($value["medID"] == $_GET['userID']){
+                                                    foreach($arr1["value"] as $key2=>$value2){
+                                                        if($value["clinicNo"] == $value2["ClinicNo"]){
+                                                            echo '<option value='.$value["clinicNo"].'>' . $value2["Name"] . '</option>';
+                                                        }
+                                                        //echo '<option value='.$value2["ClinicNo"].'>' . $value2["Name"] . '</option>';
+                                                    }
+                                                    
+                                                }
+                                            }
+
+                                            
+
+                                            ?>
                                        </select> 
                                        <!-- <select id="clinic" class="form-control">
                                           <option value="default">Doctor's Clinic</option>   
@@ -293,185 +264,61 @@
             </div>
          </div>
       </div>
-      <!-- end section -->
-	  
-	  <!-- doctor -->
-	  
-	  
-	
-    <!-- <a href="login.html" target="_self">Login</a> -->
-
-    <!-- <div class="signup">
-      <a href="signup.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Sign Up</a>
-   </div>
-
-    <div class="login">
-      <a href="login.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Login</a>
-   </div> -->
-    <!-- <div id="login" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="login" tabindex="-1">
-
-      <div class="container">
-         
-      </div>
-
-    </div>
-           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <div class="appointment-form">
-                     <h3><span>+</span> Contact your doctor!</h3>
-                     <div class="form">
-                        <form action="index.php">
-                           <fieldset>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="text" id="name" placeholder="Your Name"  />
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="email" placeholder="Your Email" id="email" />
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="email" placeholder="Doctors Email" id="email" />
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Doctor Name</option>
-                                          <option>Mr.XYZ</option>
-                                          <option>Mr.ABC</option>
-                                       </select>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <div class="center"><button type="submit">Send Message!</button></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </fieldset>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-	  
-	  
-	  end doctor section -->
 	  
        <div id="testimonials" class="section wb wow fadeIn">
          <div class="container">
             <div class="heading">
                <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
-               <h2>Your Medication</h2>
+               <h2>Your Clinics & Pharmacies</h2>
             </div> 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                <div class="appointment-form">
-                  <h3><span>+</span> Add Medication</h3>
-                  <div class="form">
-                     <form action="med.php" method="get">
+                  <h3><span>+</span> Add Clinic & Pharamacy</h3>
+                  <div class="form" >
+                     <form action="/PatientMedicationApplication/clinic.php" method="get">
                         <fieldset>
-                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
                                  <div class="form-group">
-                                    <input type="number" id="din" name="din" placeholder="Drug Identification Number"  />
+                                    <input type="number" id="id" name="id"  placeholder="Clinic Number"  />
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
                                  <div class="form-group">
-                                    <label for ="expiry"> Expiration Date</label>
-                                    <input type="datetime-local" placeholder="Expiration Date" name="expiry" id="expiry" />
+                                    <input type="text" id="name" name="name" placeholder="Clinic Name"  />
                                  </div>
                               </div>
                            </div>
-                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
                                  <div class="form-group">
-                                    <!-- <select class="form-control"> -->
-                                       <!-- <<input type= "date">  LETS PATIENT SELECT DATE OF APPOINTMENT> -->
-                                      <input type="number" placeholder="Doseage eg. 1 tablet" name="dosage" id="dosage">
-                                    
-                                 </div>
-
-                                 <div class="form-group">
-                                    <!-- <select class="form-control"> -->
-                                       <!-- <<input type= "date">  LETS PATIENT SELECT DATE OF APPOINTMENT> -->
-                                      <input type="number" placeholder="Time eg. Every x hours" name="time" id="time">
-                                       <!-- <option>Day</option>
-                                       <option>Sunday</option>
-                                       <option>Monday</option>
-                                       <option>Tuesday</option>
-                                       <option>Wednesday</option>
-                                       <option>Monday</option> -->
-                                    <!-- </select> -->
-                                 </div>
-
-                                 <div class="form-group">
-                                    <!-- <input type="time"> -->
-                                    <select class="form-control">
-                                       <option>Time Units</option>
-                                       <option>Every <i>x </i> Hours</option>
-                                       <option>Daily</option>
-                                       <option>Weekly</option>
-                                       <option>Monthly</option>
-                                    </select>
-                                 </div>
-
-                                 <div class="form-group">
-                                    <!-- <select class="form-control"> -->
-                                       <!-- <<input type= "date">  LETS PATIENT SELECT DATE OF APPOINTMENT> -->
-                                      <input type="number" placeholder="Healthcare No" name="userID" id="userID">
-                                       <!-- <option>Day</option>
-                                       <option>Sunday</option>
-                                       <option>Monday</option>
-                                       <option>Tuesday</option>
-                                       <option>Wednesday</option>
-                                       <option>Monday</option> -->
-                                    <!-- </select> -->
+                                    <input type="text" id="address" name="address" placeholder="Clinic Address"  />
                                  </div>
                               </div>
                            </div>
-                           <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
                                  <div class="form-group">
-                                    <select class="form-control">
-                                       <option>Medication Period</option>
-                                       <option>Fixed Time eg. 1 week</option>
-                                       <option>Indefinte Time Period</option>
-                                    </select>
-                                 </div>
-                              </div>
-                           </div> -->
-                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                              <div class="row">
-                                 <div class="form-group">
-                                    <textarea rows="4" id="textarea_message" class="form-control" placeholder="Notes... Side Effects"></textarea>
+                                    <input type="text" id="pharmName" name="pharmName" placeholder="Pharmacy Name"  />
                                  </div>
                               </div>
                            </div>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <input type="text" id="pharmAddress" name="pharmAddress" placeholder="Pharmacy Address"  />
+                                 </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <input type="text" id="userID" name="userID" placeholder="Doctor Id"/>
+                                 </div>
+                              </div>
+                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
                                  <div class="form-group">
@@ -487,30 +334,58 @@
 
             <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
                <div class="appointment-form">
-            <h3><span>+</span>Medication List</h3>
+            <h3><span>+</span>Clinic List</h3>
 
                <table style="width: 100%;">
                <tr>
-                  <th>DIN</th>
-                  <th>Expiration Date</th>
-                  <th>Doseage</th>
-                  <th>Time</th>
-                  <th>Leftover Amount</th>
+                  <th>Clinic No.</th>
+                  <th>Clinic Name</th>
+                  <th>Clinic Address</th>
                </tr>
-               <?php 
-                    $url = "https://localhost:5001/api/prescriptions/GetPrescriptions";
+                <?php 
+                    $url = "https://localhost:5001/api/worksAt/GetWorksAt";
                     $arr = make_curl_get_request($url);
 
-                    $url1 = "https://localhost:5001/api/medication/GetMedications";
+                    $url1 = "https://localhost:5001/api/clinics/GetClinics";
                     $arr1 = make_curl_get_request($url1);
                     
                     $i = 0;
                     foreach($arr["value"] as $key=>$value){
-                        if($value["healthcareNo"] == $_GET['userID']){
+                        if($value["medID"] == $_GET['userID']){
                             foreach($arr1["value"] as $key2=>$value2){
-                                if($value["medDIN"] == $value2["dIN"]){
+                                if($value["clinicNo"] == $value2["ClinicNo"]){
                                     echo "<tr>";
-                                    echo "<td>" . $value["medDIN"] . "</td><td>" . trim(($value2["expDate"])) ."</td><td>" . trim(($value2["dosage"])) . "</td><td>" . trim($value2["time"]) . "</td><td>". trim($value2["leftoverAmount"]) . "</td>";
+                                    echo "<td>" . $value["clinicNo"] . "</td><td>" . trim(($value2["Name"])) . "</td><td>" . trim($value2["Address"]) . "</td>";
+                                    echo "</tr>";
+                                    $i++;
+                                }
+                            }  
+                        }
+                    }
+                ?>
+               </table>
+                <br></br>
+                <h3><span>+</span>Pharmacy List</h3>
+
+               <table style="width: 100%;">
+               <tr>
+                  <th>Pharmacy Name</th>
+                  <th>Pharmacy Address</th>
+               </tr>
+                <?php 
+                    $url = "https://localhost:5001/api/worksAt/GetWorksAt";
+                    $arr = make_curl_get_request($url);
+
+                    $url1 = "https://localhost:5001/api/pharmacies/GetPharmacies";
+                    $arr1 = make_curl_get_request($url1);
+                    
+                    $i = 0;
+                    foreach($arr["value"] as $key=>$value){
+                        if($value["medID"] == $_GET['userID']){
+                            foreach($arr1["value"] as $key2=>$value2){
+                                if($value["clinicNo"] == $value2["clinic_no"]){
+                                    echo "<tr>";
+                                    echo "<td>" . $value2["name"] . "</td><td>" . trim($value2["location"]) . "</td>";
                                     echo "</tr>";
                                     $i++;
                                 }
@@ -593,79 +468,6 @@
                    </div><!-- end row -->
                </div><!-- end container -->
            </div>
-
-
-      <div id="price" class="section wb wow fadeIn" style="padding-bottom:0;">
-         <div class="container">
-            <div class="heading">
-               <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
-               <h2>Find your closest clinic/pharmacy!</h2>
-            </div>
-         </div>
-         <div class="contact-section">
-            <div class="form-contant">
-               <form id="ajax-contact" action="assets/mailer.php" method="post">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="form-group in_name">
-                           <input type="text" class="form-control" placeholder="Address" required="required">
-                        </div>
-                        <div class="actions">
-                           <input type="submit" value="Submit" name="submit" id="submitButton" class="btn small" title="Submit Your Message!">
-                        </div>
-                     </div>
-                  </div>
-               </form>
-            </div>
-            <div id="googleMap" style="width:100%;height:450px;"></div>
-         </div>
-      </div>
-
-      <footer id="footer" class="footer-area wow fadeIn">
-         <!-- <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="logo padding">
-                     <a href=""><img src="images/PMA-logo.png" alt=""></a>
-                     <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="footer-info padding">
-                     <h3>CONTACT US</h3>
-                     <p><i class="fa fa-map-marker" aria-hidden="true"></i> PO Box 16122 Collins Street West Victoria 8007 Australia</p>
-                     <p><i class="fa fa-paper-plane" aria-hidden="true"></i> info@gmail.com</p>
-                     <p><i class="fa fa-phone" aria-hidden="true"></i> (+1) 800 123 456</p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="subcriber-info">
-                     <h3>SUBSCRIBE</h3>
-                     <p>Get healthy news, tip and solutions to your problems from our experts.</p>
-                     <div class="subcriber-box">
-                        <form id="mc-form" class="mc-form">
-                           <div class="newsletter-form">
-                              <input type="email" autocomplete="off" id="mc-email" placeholder="Email address" class="form-control" name="EMAIL">
-                              <button class="mc-submit" type="submit"><i class="fa fa-paper-plane"></i></button> 
-                              <div class="clearfix"></div>
-                              <!-- mailchimp-alerts Start -->
-                              <!-- <div class="mailchimp-alerts"> -->
-                                 <!-- <div class="mailchimp-submitting"></div> -->
-                                 <!-- mailchimp-submitting end -->
-                                 <!-- <div class="mailchimp-success"></div> -->
-                                 <!-- mailchimp-success end -->
-                                 <!-- <div class="mailchimp-error"></div> -->
-                                 <!-- mailchimp-error end -->
-                              <!-- </div> -->
-                              <!-- mailchimp-alerts end -->
-                           <!-- </div> -->
-                        <!-- </form> -->
-                     <!-- </div> -->
-                  <!-- </div> -->
-               <!-- </div> -->
-            <!-- </div> --> -->
-         <!-- </div> -->
-      </footer>
 
       <div class="copyright-area wow fadeIn">
          <div class="container">
