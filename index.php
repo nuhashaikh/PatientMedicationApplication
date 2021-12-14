@@ -308,11 +308,29 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Doctor Name</option>
-                                          <option>Mr.XYZ</option>
-                                          <option>Mr.ABC</option>
-                                       </select>
+                                       <select name="doctor" id="doctor" class="form-control">
+                                          <option value="default">Doctor Name</option>
+                                          <?php 
+                                             require __DIR__ . '/helper.php';
+                                             $url = "https://localhost:5001/api/doctors/GetDoctors";
+                                             $arr = make_curl_get_request($url);
+                                          
+                                             foreach($arr["value"] as $key=>$value){
+                                                echo '<option value='.$value["id"].'>' . $value["name"] . '</option>';
+                                             }
+
+                                             $url = "https://localhost:5001/api/worksAt/GetWorksAt";
+                                             $arr = make_curl_get_request($url);
+                                             foreach($arr["value"] as $key=>$value){
+                                                if($value["medID"] == $_POST['doctor']){
+                                                   echo '<option value='.$value["clinicNo"].'>' . $value["clinicNo"] . '</option>';
+                                                }
+                                             }
+                                             ?>
+                                       </select> 
+                                       <!-- <select id="clinic" class="form-control">
+                                          <option value="default">Doctor's Clinic</option>   
+                                       </select> -->
                                     </div>
                                  </div>
                               </div>
@@ -490,14 +508,31 @@
                          
                            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <div class="row">
-                                 <div class="form-group">
-                                    <select class="form-control">
-                                       <option>Doctor Name</option>
-                                       <option>Mr.XYZ</option>
-                                       <option>Mr.ABC</option>
-                                    </select>
-                                 </div>
-                              </div>
+                                    <div class="form-group">
+                                       <select name="doctor" id="doctor" class="form-control">
+                                          <option value="default">Doctor Name</option>
+                                          <?php 
+                                             require __DIR__ . '/helper.php';
+                                             $url = "https://localhost:5001/api/doctors/GetDoctors";
+                                             $arr = make_curl_get_request($url);
+                                          
+                                             foreach($arr["value"] as $key=>$value){
+                                                echo '<option value='.$value["id"].'>' . $value["name"] . '</option>';
+                                             }
+
+                                             $url = "https://localhost:5001/api/worksAt/GetWorksAt";
+                                             $arr = make_curl_get_request($url);
+                                             foreach($arr["value"] as $key=>$value){
+                                                if($value["medID"] == $_POST['doctor']){
+                                                   echo '<option value='.$value["clinicNo"].'>' . $value["clinicNo"] . '</option>';
+                                                }
+                                             }
+                                             ?>
+                                       </select> 
+                                       <!-- <select id="clinic" class="form-control">
+                                          <option value="default">Doctor's Clinic</option>   
+                                       </select> -->
+                                    </div>
                            </div> -->
 
                            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -511,10 +546,6 @@
                                  </div>
                               </div>
                            </div> -->
-
-
-                           
-            
                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                               <div class="row">
                                  <div class="form-group">
