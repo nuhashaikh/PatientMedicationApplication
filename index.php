@@ -195,60 +195,14 @@
                </div>
                <!-- end col -->
                <div class="col-md-6">
-                  <div class="post-media wow fadeIn">
-                     <img src="images/about_03.jpg" alt="" class="img-responsive">
-                     <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
-                  </div>
+                  <!-- <div class="post-media wow fadeIn">
+                     <img src="images/water.png" alt="#">
+                  </div> -->
                   <!-- end media -->
                </div>
                <!-- end col -->
             </div>
             <!-- end row -->
-            <hr class="hr1">
-            <div class="row">
-               <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div class="service-widget">
-                     <div class="post-media wow fadeIn">
-                        <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="images/clinic_01.jpg" alt="" class="img-responsive">
-                     </div>
-                     <h3>Digital Control Center</h3>
-                  </div>
-                  <!-- end service -->
-               </div>
-               <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div class="service-widget">
-                     <div class="post-media wow fadeIn">
-                        <a href="images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="images/clinic_02.jpg" alt="" class="img-responsive">
-                     </div>
-                     <h3>Hygienic Operating Room</h3>
-                  </div>
-                  <!-- end service -->
-               </div>
-               <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div class="service-widget">
-                     <div class="post-media wow fadeIn">
-                        <a href="images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="images/clinic_03.jpg" alt="" class="img-responsive">
-                     </div>
-                     <h3>Specialist Physicians</h3>
-                  </div>
-                  <!-- end service -->
-               </div>
-               <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div class="service-widget">
-                     <div class="post-media wow fadeIn">
-                        <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="images/clinic_01.jpg" alt="" class="img-responsive">
-                     </div>
-                     <h3>Digital Control Center</h3>
-                  </div>
-                  <!-- end service -->
-               </div>
-            </div>
-            <!-- end row -->
-         </div>
          <!-- end container -->
       </div>
       <div id="service" class="services wow fadeIn">
@@ -346,11 +300,29 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
                                     <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Doctor Name</option>
-                                          <option>Mr.XYZ</option>
-                                          <option>Mr.ABC</option>
-                                       </select>
+                                       <select name="doctor" id="doctor" class="form-control">
+                                          <option value="default">Doctor Name</option>
+                                          <?php 
+                                             require __DIR__ . '/helper.php';
+                                             $url = "https://localhost:5001/api/doctors/GetDoctors";
+                                             $arr = make_curl_get_request($url);
+                                          
+                                             foreach($arr["value"] as $key=>$value){
+                                                echo '<option value='.$value["id"].'>' . $value["name"] . '</option>';
+                                             }
+
+                                             $url = "https://localhost:5001/api/worksAt/GetWorksAt";
+                                             $arr = make_curl_get_request($url);
+                                             foreach($arr["value"] as $key=>$value){
+                                                if($value["medID"] == $_POST['doctor']){
+                                                   echo '<option value='.$value["clinicNo"].'>' . $value["clinicNo"] . '</option>';
+                                                }
+                                             }
+                                             ?>
+                                       </select> 
+                                       <!-- <select id="clinic" class="form-control">
+                                          <option value="default">Doctor's Clinic</option>   
+                                       </select> -->
                                     </div>
                                  </div>
                               </div>
