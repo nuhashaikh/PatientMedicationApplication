@@ -344,7 +344,7 @@ body {
   background: #95a5a6;
 }
 .chat-box {
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 0px;
   background: white;
@@ -369,13 +369,14 @@ body {
   margin: 10px;
 }
 .chat-body {
+  resize: none;
   height: 355px;
   width: inherit;
   overflow: auto;
   margin-bottom: 45px;
 }
 .chat-text {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   height: 45px;
   width: inherit;
