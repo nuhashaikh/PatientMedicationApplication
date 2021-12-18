@@ -126,10 +126,9 @@
 
       </div>
 
-      <div id="about" class="section wow fadeIn">
-         <div class="container">
+      <div id="about" class="section wow fadeIn" style="background:#ffffff;">
+         <div class="container"  >
             <div class="heading">
-
                <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
                <h2>About us</h2>
             </div>
@@ -158,6 +157,7 @@
             </div>
             <!-- end row -->
          <!-- end container -->
+         </div>
       </div>
       
       <div id="service" class="services wow fadeIn">
@@ -167,7 +167,7 @@
                   <div class="appointment-form">
                      <h3><span>+</span> Time Available</h3>
                      <div class="form">
-                        <form action="/PatientMedicationApplication/book_action.php" method="post">
+                        <form action="" method="post">
                            <fieldset>
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">

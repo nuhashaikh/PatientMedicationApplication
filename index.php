@@ -130,42 +130,34 @@
          <!-- end container -->
       </div>
       <!-- end section -->
-      <head>
-  <title>Patient Medication Application Chat</title>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="chat-box">
-      <div class="chat-head">
-        <h2>Chat Box</h2>
-        <img src="https://maxcdn.icons8.com/windows10/PNG/16/Arrows/angle_down-16.png" title="Expand Arrow" width="16">
+      <div class="wrapper">
+         <div class="chat-box">
+            <div class="chat-head">
+               <h2>Chat Box</h2>
+               <img src="https://maxcdn.icons8.com/windows10/PNG/16/Arrows/angle_down-16.png" title="Expand Arrow" width="16">
+            </div>
+            <div class="chat-body">
+               <div class="msg-insert">
+                  <div class="msg-send"> Send message </div>
+                  <div class="msg-receive"> Received message </div>
+               </div>
+               <div class="chat-text">
+                  <textarea placeholder="Send"></textarea>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="chat-body">
-        <div class="msg-insert">
-  <div class="msg-send"> Send message </div>
-  <div class="msg-receive"> Received message </div>
-</div>
-        <div class="chat-text">
-          <textarea placeholder="Send"></textarea>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
       <div class="signup" style="background:#91cdfd;">
          <a href="signup.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Sign Up</a>
       </div>
    
-       <div class="login" style="background:#0071d1;">
+      <div class="login" style="background:#0071d1;">
          <a href="login.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Login</a>
-
       </div>
 
-      <div id="about" class="section wow fadeIn">
-         <div class="container">
+      <div id="about" class="section wow fadeIn" style="background:#ffffff;">
+         <div class="container"  >
             <div class="heading">
-
                <span class="icon-logo"><img src="images/PMA-logo-medium.png" alt="#"></span>
                <h2>About us</h2>
             </div>
@@ -194,6 +186,7 @@
             </div>
             <!-- end row -->
          <!-- end container -->
+         </div>
       </div>
       
       <div id="service" class="services wow fadeIn">
@@ -203,7 +196,7 @@
                   <div class="appointment-form">
                      <h3><span>+</span> Book Appointment</h3>
                      <div class="form">
-                        <form action="/PatientMedicationApplication/book_action.php" method="post">
+                        <form action="" method="post">
                            <fieldset>
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                  <div class="row">
@@ -293,93 +286,6 @@
             </div>
          </div>
       </div>
-      <!-- end section -->
-	  
-	  <!-- doctor -->
-	  
-	  
-	
-    <!-- <a href="login.html" target="_self">Login</a> -->
-
-    <!-- <div class="signup">
-      <a href="signup.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Sign Up</a>
-   </div>
-
-    <div class="login">
-      <a href="login.html" data-scroll="" class="btn btn-dark btn-radius btn-brd">Login</a>
-   </div> -->
-    <!-- <div id="login" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="login" tabindex="-1">
-
-      <div class="container">
-         
-      </div>
-
-    </div>
-           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <div class="appointment-form">
-                     <h3><span>+</span> Contact your doctor!</h3>
-                     <div class="form">
-                        <form action="index.php">
-                           <fieldset>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="text" id="name" placeholder="Your Name"  />
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="email" placeholder="Your Email" id="email" />
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <input type="email" placeholder="Doctors Email" id="email" />
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Doctor Name</option>
-                                          <option>Mr.XYZ</option>
-                                          <option>Mr.ABC</option>
-                                       </select>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="form-group">
-                                       <div class="center"><button type="submit">Send Message!</button></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </fieldset>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-	  
-	  
-	  end doctor section -->
-	  
        <div id="testimonials" class="section wb wow fadeIn">
          <div class="container">
             <div class="heading">
@@ -604,7 +510,7 @@
          </div>
          <div class="contact-section">
             <div class="form-contant">
-               <form id="ajax-contact" action="assets/mailer.php" method="post">
+               <form id="ajax-contact" action="" method="post">
                   <div class="row">
                      <div class="col-md-6">
                         <div class="form-group in_name">
